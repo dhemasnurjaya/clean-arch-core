@@ -9,7 +9,7 @@ class GetCurrentWeather
   GetCurrentWeather({required this.weatherApiRepository});
 
   @override
-  Future<Either<Failure, CurrentWeather>> execute(
+  Future<Either<Failure, CurrentWeather>> call(
     GetCurrentWeatherParams params,
   ) async {
     return weatherApiRepository.getCurrentWeather(params.city);

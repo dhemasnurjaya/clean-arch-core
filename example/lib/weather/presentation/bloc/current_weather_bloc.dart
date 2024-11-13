@@ -21,7 +21,7 @@ class CurrentWeatherBloc
   ) async {
     emit(const CurrentWeatherLoadingState());
 
-    final result = await getCurrentWeather.execute(
+    final result = await getCurrentWeather(
       GetCurrentWeatherParams(city: event.city),
     );
 

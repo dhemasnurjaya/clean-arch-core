@@ -40,7 +40,7 @@ void main() {
         .thenAnswer((_) async => right(tCurrentWeather));
 
     // Act
-    final result = await useCase.execute(tParams);
+    final result = await useCase(tParams);
 
     // Assert
     expect(result, isA<Right<Failure, CurrentWeather>>());
